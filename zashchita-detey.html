@@ -19,14 +19,14 @@ html[data-theme="night"]{
   --bg:#0A0A0A; --bg-soft:#141414; --panel:rgba(20,20,20,.72);
   --text:#F4F4F5; --muted:#A1A1A6; --line:rgba(255,255,255,.10);
   --glass:rgba(255,255,255,.045); --glass-line:rgba(255,255,255,.10);
-  --header:rgba(10,10,10,.55); --overlay1:rgba(0,0,0,.45); --overlay2:rgba(0,0,0,.70);
+  --header:rgba(10,10,10,.55); --overlay1:rgba(0,0,0,.22); --overlay2:rgba(0,0,0,.45);
   --glow-fb:radial-gradient(circle at 50% 28%,rgba(225,29,42,.20),transparent 60%),linear-gradient(160deg,#0a0a0a,#161616);
 }
 html[data-theme="day"]{
   --bg:#FAFAFA; --bg-soft:#FFFFFF; --panel:rgba(255,255,255,.78);
   --text:#0E0E10; --muted:#5A5A60; --line:rgba(0,0,0,.10);
   --glass:rgba(255,255,255,.70); --glass-line:rgba(0,0,0,.08);
-  --header:rgba(255,255,255,.62); --overlay1:rgba(0,0,0,.28); --overlay2:rgba(0,0,0,.58);
+  --header:rgba(255,255,255,.62); --overlay1:rgba(0,0,0,.14); --overlay2:rgba(0,0,0,.40);
   --glow-fb:radial-gradient(circle at 50% 28%,rgba(225,29,42,.12),transparent 60%),linear-gradient(160deg,#fafafa,#ededed);
 }
 *{box-sizing:border-box}
@@ -227,7 +227,7 @@ html[data-theme="day"] .hero-night{display:none}
     <h1 class="svc-title" data-aos="fade-up">Защита от выпадения детей</h1>
     <div class="svc-bar" data-aos="fade-up"></div>
     <p class="svc-intro" data-aos="fade-up">Безопасность детей — главное. Устанавливаем замки, блокираторы и усиленные сетки, чтобы окно невозможно было открыть без вашего ведома.</p>
-    <div class="svc-photo" data-aos="fade-up" style="background-image:linear-gradient(160deg,rgba(225,29,42,.10),transparent),var(--glow-fb),url('images/service-zashchita.jpg')"></div>
+    <div class="svc-photo" data-aos="fade-up" style="background-image:url('images/service-zashchita.jpg'),var(--glow-fb)"></div>
   </div>
 </section>
 
@@ -255,6 +255,10 @@ html[data-theme="day"] .hero-night{display:none}
         <div><h4>Сетки «Антикошка»</h4><p>Усиленная рама и полотно выдерживают нагрузку.</p></div>
       </div>
     </div>
+    <div class="cta-sec">
+      <a class="btn btn-cta js-consult" href="https://wa.me/77058462749" data-msg="Здравствуйте! Хочу бесплатную консультацию по услуге «Защита от выпадения детей»."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5h16v10H9l-4 3.5z"/><path d="M8 9.5h8M8 12.5h5"/></svg>Бесплатная консультация здесь!</a>
+      <a class="btn btn-ghost js-wa" href="https://wa.me/77058462749" data-msg="Здравствуйте! Вопрос по услуге «Защита от выпадения детей»."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.6 20.4l1.3-3.7A7.5 7.5 0 1112 19.5a7.5 7.5 0 01-3.6-.9l-4.8 1.8z"/><path d="M9.1 8.9c-.2 0-.5.1-.7.4-.3.3-.9.8-.9 2s.9 2.4 1 2.5c.1.2 1.8 2.7 4.3 3.7 2 .8 2.5.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.1-.3-.2-.5-.3-.3-.2-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.7.9c-.1.1-.3.2-.5.1-.3-.1-1.1-.4-2-1.2-.7-.7-1.2-1.4-1.4-1.7-.1-.2 0-.4.1-.5l.4-.4c.1-.2.2-.3.2-.5.1-.2 0-.3 0-.4 0-.1-.6-1.4-.8-1.9-.2-.4-.4-.4-.5-.4h-.2z"/></svg>Написать в WhatsApp</a>
+    </div>
 
     <div class="pens" data-aos="fade-up">
       <span class="pens-eye"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M16 8l-8 8"/><circle cx="9" cy="9" r="1.2"/><circle cx="15" cy="15" r="1.2"/></svg>Я пенсионер</span>
@@ -263,10 +267,6 @@ html[data-theme="day"] .hero-night{display:none}
       <div style="max-width:420px">
         <a class="btn btn-cta js-order" href="https://wa.me/77058462749" data-msg="Здравствуйте! Я пенсионер, хочу заказать «Защита от выпадения детей» со скидкой до 30%."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 6.5"/></svg>Заказать со скидкой до 30%</a>
       </div>
-    </div>
-    <div class="cta-sec">
-      <a class="btn btn-cta js-consult" href="https://wa.me/77058462749" data-msg="Здравствуйте! Хочу бесплатную консультацию по услуге «Защита от выпадения детей»."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5h16v10H9l-4 3.5z"/><path d="M8 9.5h8M8 12.5h5"/></svg>Бесплатная консультация здесь!</a>
-      <a class="btn btn-ghost js-wa" href="https://wa.me/77058462749" data-msg="Здравствуйте! Вопрос по услуге «Защита от выпадения детей»."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.6 20.4l1.3-3.7A7.5 7.5 0 1112 19.5a7.5 7.5 0 01-3.6-.9l-4.8 1.8z"/><path d="M9.1 8.9c-.2 0-.5.1-.7.4-.3.3-.9.8-.9 2s.9 2.4 1 2.5c.1.2 1.8 2.7 4.3 3.7 2 .8 2.5.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.1-.3-.2-.5-.3-.3-.2-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.7.9c-.1.1-.3.2-.5.1-.3-.1-1.1-.4-2-1.2-.7-.7-1.2-1.4-1.4-1.7-.1-.2 0-.4.1-.5l.4-.4c.1-.2.2-.3.2-.5.1-.2 0-.3 0-.4 0-.1-.6-1.4-.8-1.9-.2-.4-.4-.4-.5-.4h-.2z"/></svg>Написать в WhatsApp</a>
     </div>
   </div>
 </section>
