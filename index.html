@@ -84,14 +84,11 @@ a{color:inherit;text-decoration:none}
 html[data-theme="night"] .hero-day{display:none}
 html[data-theme="day"] .hero-night{display:none}
 .hero-line{position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,transparent,var(--accent),transparent);box-shadow:0 0 22px var(--accent-soft)}
-.hero-in{position:relative;z-index:2;padding:0 18px 54px;width:100%;max-width:1180px;margin:0 auto;color:#fff}
-html[data-theme="day"] .hero-in{color:#fff}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:#fff;border:1px solid rgba(255,255,255,.35);border-left:3px solid var(--accent);padding:7px 13px;border-radius:6px;backdrop-filter:blur(4px);margin-bottom:18px}
-.hero h1{font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(30px,8vw,58px);line-height:1.04;text-transform:uppercase;margin:0;text-shadow:0 2px 30px rgba(0,0,0,.5)}
-.hero h1 span{color:#fff;position:relative}
-.hero p{max-width:520px;margin:16px 0 26px;font-size:16px;line-height:1.55;color:rgba(255,255,255,.88)}
-.scroll-hint{display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.8);font-size:13px;letter-spacing:1px;text-transform:uppercase}
-.scroll-hint svg{width:18px;height:18px;animation:bob 1.8s ease-in-out infinite}
+.hero-in{position:relative;z-index:2;padding:0 18px 54px;width:100%;max-width:1180px;margin:0 auto;display:flex;justify-content:center}
+.hero-cta{display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:14px;background:rgba(0,0,0,.34);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.28);border-bottom:2px solid var(--accent);color:#fff;font-family:'Oswald',sans-serif;font-weight:500;letter-spacing:2px;text-transform:uppercase;font-size:15px;box-shadow:0 0 34px -10px var(--accent);transition:.22s}
+.hero-cta svg{width:18px;height:18px;animation:bob 1.8s ease-in-out infinite}
+.hero-cta:hover{border-color:var(--accent);box-shadow:0 0 46px -6px var(--accent);transform:translateY(-2px)}
+.hero-cta:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
 
 /* SECTIONS */
@@ -111,7 +108,7 @@ html[data-theme="day"] .hero-in{color:#fff}
 .card:hover::before,.card:focus-within::before{opacity:1}
 .card-ic{width:50px;height:50px;border-radius:12px;display:grid;place-items:center;border:1px solid var(--glass-line);background:var(--bg-soft);color:var(--accent)}
 .card-ic svg{width:26px;height:26px}
-.card h3{font-family:'Oswald',sans-serif;font-weight:600;font-size:20px;text-transform:uppercase;margin:0;letter-spacing:.4px}
+.card h3{font-family:'Oswald',sans-serif;font-weight:600;font-size:20px;text-transform:uppercase;margin:0;letter-spacing:.4px;min-height:44px;display:flex;align-items:center}
 .card p{color:var(--muted);font-size:14px;line-height:1.5;margin:0;flex:1}
 .card-go{display:inline-flex;align-items:center;gap:7px;color:var(--accent);font-weight:600;font-size:14px}
 .card-go svg{width:16px;height:16px;transform:rotate(-90deg)}
@@ -198,24 +195,24 @@ html[data-theme="day"] .hero-in{color:#fff}
     <button class="icbtn" id="menuClose" aria-label="Закрыть меню"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
   </div>
   <nav class="menu-nav">
-    <a class="mlink active" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M12 3v18M4 12h16"/></svg><span>Главная</span></a>
-<a class="mlink" href="zashchita-detey.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg><span>Защита от выпадения детей</span></a>
-<a class="mlink" href="izgotovlenie-okon.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M12 3v18M4 12h16"/></svg><span>Изготовление окон</span></a>
-<a class="mlink" href="kovanye-reshetki.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M9 4v16M15 4v16M4 9h16M4 15h16"/></svg><span>Кованые решётки</span></a>
-<a class="mlink" href="moskitnye-setki.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M4 9h16M4 14h16M9 4v16M14 4v16"/></svg><span>Москитные сетки</span></a>
+    <a class="mlink active" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7"/><path d="M6 9.6V20h12V9.6"/><path d="M10 20v-5h4v5"/></svg><span>Главная</span></a>
+<a class="mlink" href="zashchita-detey.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 2.6v5.1c0 4.4-3 7.7-7 9-4-1.3-7-4.6-7-9V5.6L12 3z"/><rect x="9.3" y="10.6" width="5.4" height="4.4" rx="1"/><path d="M10.4 10.6V9.5a1.6 1.6 0 013.2 0v1.1"/></svg><span>Защита от выпадения детей</span></a>
+<a class="mlink" href="izgotovlenie-okon.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M4 12h16M12 3v18"/><path d="M16.4 8.6v2.4"/></svg><span>Изготовление окон</span></a>
+<a class="mlink" href="kovanye-reshetki.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M8 4v16M12 4v16M16 4v16"/><path d="M6 12c1.5-1.7 3-1.7 3 0s1.5 1.7 3 0 3-1.7 3 0 1.5 1.7 3 0"/></svg><span>Кованые решётки</span></a>
+<a class="mlink" href="moskitnye-setki.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M4 8h16M4 12h16M4 16h16M8 4v16M12 4v16M16 4v16"/></svg><span>Москитные сетки</span></a>
 <a class="mlink" href="plisse.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14M5 20h14"/><path d="M7 4l10 4-10 4 10 4-10 4"/></svg><span>Плиссе</span></a>
-<a class="mlink" href="remont-okon.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 00-5.4 5.2L4 17l3 3 5.5-5.3a4 4 0 005.2-5.4l-2.6 2.6-2.5-.6-.6-2.5 2.6-2.6z"/></svg><span>Ремонт окон</span></a>
+<a class="mlink" href="remont-okon.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.6 6.4a3.8 3.8 0 00-5 4.9l-5.1 5.1a1.5 1.5 0 002.1 2.1l5.1-5.1a3.8 3.8 0 004.9-5l-2.3 2.3-2-.5-.5-2 2.3-2.3z"/></svg><span>Ремонт окон</span></a>
 
   </nav>
   <div class="menu-sec">
     <div class="menu-label">Город</div>
     <div class="city-row">
-      <button class="city-btn" data-city="Алматы"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><span>Алматы</span></button>
-      <button class="city-btn" data-city="Астана"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><span>Астана</span></button>
+      <button class="city-btn" data-city="Алматы"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg><span>Алматы</span></button>
+      <button class="city-btn" data-city="Астана"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg><span>Астана</span></button>
     </div>
   </div>
   <div class="menu-sec">
-    <a class="btn btn-cta js-consult" href="https://wa.me/77058462749" data-msg="Здравствуйте! Хочу бесплатную консультацию."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.5 5.5l2.5 2.5M16 16l2.5 2.5M18.5 5.5L16 8M8 16l-2.5 2.5"/></svg>Бесплатная консультация здесь!</a>
+    <a class="btn btn-cta js-consult" href="https://wa.me/77058462749" data-msg="Здравствуйте! Хочу бесплатную консультацию."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5h16v10H9l-4 3.5z"/><path d="M8 9.5h8M8 12.5h5"/></svg>Бесплатная консультация здесь!</a>
   </div>
   <div class="dev">
     Разработка и продвижение —
@@ -229,10 +226,7 @@ html[data-theme="day"] .hero-in{color:#fff}
   <div class="hero-bg hero-day"></div>
   <div class="hero-line"></div>
   <div class="hero-in">
-    <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><span class="js-city">Алматы</span> · Астана</span>
-    <h1>Окна, сетки<br>и защита<br><span>под ключ</span></h1>
-    <p>Изготовление и ремонт окон, москитные сетки, плиссе, кованые решётки и защита от выпадения детей. Бесплатная консультация — без форм и звонков, прямо в WhatsApp.</p>
-    <a class="scroll-hint" href="#uslugi">Смотреть услуги <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
+    <a class="hero-cta" href="#uslugi">Смотреть услуги <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
   </div>
 </section>
 
@@ -241,32 +235,32 @@ html[data-theme="day"] .hero-in{color:#fff}
     <div class="sec-head" data-aos="fade-up">
       <span class="sec-eye">Каталог услуг</span>
       <h2 class="sec-title">Виды услуг</h2>
-      <p class="sec-sub">Выберите услугу — на странице подробности и быстрый контакт. Цен нет: считаем индивидуально по вашему окну.</p>
+      <p class="sec-sub">Выберите услугу — внутри подробности и быстрая связь в один тап.</p>
     </div>
     <div class="grid">
       <article class="card" data-aos="fade-up">
-        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg></div>
+        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 2.6v5.1c0 4.4-3 7.7-7 9-4-1.3-7-4.6-7-9V5.6L12 3z"/><rect x="9.3" y="10.6" width="5.4" height="4.4" rx="1"/><path d="M10.4 10.6V9.5a1.6 1.6 0 013.2 0v1.1"/></svg></div>
         <h3>Защита от выпадения детей</h3>
         <p>Замки, блокираторы и прочные сетки «Антикошка».</p>
         <span class="card-go">Подробнее <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
         <a class="stretch" href="zashchita-detey.html" aria-label="Защита от выпадения детей"></a>
       </article>
       <article class="card" data-aos="fade-up">
-        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M12 3v18M4 12h16"/></svg></div>
+        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M4 12h16M12 3v18"/><path d="M16.4 8.6v2.4"/></svg></div>
         <h3>Изготовление окон</h3>
         <p>Металлопластиковые окна на заказ по вашим размерам.</p>
         <span class="card-go">Подробнее <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
         <a class="stretch" href="izgotovlenie-okon.html" aria-label="Изготовление окон"></a>
       </article>
       <article class="card" data-aos="fade-up">
-        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M9 4v16M15 4v16M4 9h16M4 15h16"/></svg></div>
+        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M8 4v16M12 4v16M16 4v16"/><path d="M6 12c1.5-1.7 3-1.7 3 0s1.5 1.7 3 0 3-1.7 3 0 1.5 1.7 3 0"/></svg></div>
         <h3>Кованые решётки</h3>
         <p>Надёжная защита и аккуратный вид для ваших окон.</p>
         <span class="card-go">Подробнее <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
         <a class="stretch" href="kovanye-reshetki.html" aria-label="Кованые решётки"></a>
       </article>
       <article class="card" data-aos="fade-up">
-        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M4 9h16M4 14h16M9 4v16M14 4v16"/></svg></div>
+        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M4 8h16M4 12h16M4 16h16M8 4v16M12 4v16M16 4v16"/></svg></div>
         <h3>Москитные сетки</h3>
         <p>Рамочные, раздвижные, «Антикошка» и «Антипыль».</p>
         <span class="card-go">Подробнее <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
@@ -280,7 +274,7 @@ html[data-theme="day"] .hero-in{color:#fff}
         <a class="stretch" href="plisse.html" aria-label="Плиссе"></a>
       </article>
       <article class="card" data-aos="fade-up">
-        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 00-5.4 5.2L4 17l3 3 5.5-5.3a4 4 0 005.2-5.4l-2.6 2.6-2.5-.6-.6-2.5 2.6-2.6z"/></svg></div>
+        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.6 6.4a3.8 3.8 0 00-5 4.9l-5.1 5.1a1.5 1.5 0 002.1 2.1l5.1-5.1a3.8 3.8 0 004.9-5l-2.3 2.3-2-.5-.5-2 2.3-2.3z"/></svg></div>
         <h3>Ремонт окон</h3>
         <p>Регулировка, замена фурнитуры и устранение продувания.</p>
         <span class="card-go">Подробнее <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
@@ -288,7 +282,7 @@ html[data-theme="day"] .hero-in{color:#fff}
       </article>
     </div>
     <div style="max-width:480px;margin:30px auto 0">
-      <a class="btn btn-cta js-consult" href="https://wa.me/77058462749" data-msg="Здравствуйте! Хочу бесплатную консультацию."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.5 5.5l2.5 2.5M16 16l2.5 2.5M18.5 5.5L16 8M8 16l-2.5 2.5"/></svg>Бесплатная консультация здесь!</a>
+      <a class="btn btn-cta js-consult" href="https://wa.me/77058462749" data-msg="Здравствуйте! Хочу бесплатную консультацию."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5h16v10H9l-4 3.5z"/><path d="M8 9.5h8M8 12.5h5"/></svg>Бесплатная консультация здесь!</a>
     </div>
   </div>
 </section>
@@ -301,7 +295,7 @@ html[data-theme="day"] .hero-in{color:#fff}
         <p style="color:var(--muted);line-height:1.6;max-width:300px;margin:0">Окна, москитные сетки, защита и ремонт. Работаем по городу <span class="js-city">Алматы</span>.</p>
         <div class="ft-contact" style="margin-top:18px">
           <a href="tel:+77058462749"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3l1.5 4-2 1.5a11 11 0 005 5l1.5-2 4 1.5v3a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg>+7 705 846 2749</a>
-          <a class="js-wa" href="https://wa.me/77058462749" data-msg="Здравствуйте! Пишу с сайта HUB MASTER."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.6-4.2A8 8 0 1112 20a8 8 0 01-4-1.1L3 21z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5.7 0 1-.4 1-1l-.1-1.2-1.8-.5-.8.9c-1-.4-1.8-1.2-2.2-2.2l.9-.8-.5-1.8L10.5 8c-.6 0-1 .3-1 .9z"/></svg>WhatsApp</a>
+          <a class="js-wa" href="https://wa.me/77058462749" data-msg="Здравствуйте! Пишу с сайта HUB MASTER."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.6 20.4l1.3-3.7A7.5 7.5 0 1112 19.5a7.5 7.5 0 01-3.6-.9l-4.8 1.8z"/><path d="M9.1 8.9c-.2 0-.5.1-.7.4-.3.3-.9.8-.9 2s.9 2.4 1 2.5c.1.2 1.8 2.7 4.3 3.7 2 .8 2.5.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.1-.3-.2-.5-.3-.3-.2-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.7.9c-.1.1-.3.2-.5.1-.3-.1-1.1-.4-2-1.2-.7-.7-1.2-1.4-1.4-1.7-.1-.2 0-.4.1-.5l.4-.4c.1-.2.2-.3.2-.5.1-.2 0-.3 0-.4 0-.1-.6-1.4-.8-1.9-.2-.4-.4-.4-.5-.4h-.2z"/></svg>WhatsApp</a>
         </div>
       </div>
       <div>
@@ -332,9 +326,9 @@ html[data-theme="day"] .hero-in{color:#fff}
 </footer>
 
 <nav class="mbar">
-  <a class="js-wa" href="https://wa.me/77058462749" data-msg="Здравствуйте! Пишу с сайта HUB MASTER."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.6-4.2A8 8 0 1112 20a8 8 0 01-4-1.1L3 21z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5.7 0 1-.4 1-1l-.1-1.2-1.8-.5-.8.9c-1-.4-1.8-1.2-2.2-2.2l.9-.8-.5-1.8L10.5 8c-.6 0-1 .3-1 .9z"/></svg>WhatsApp</a>
+  <a class="js-wa" href="https://wa.me/77058462749" data-msg="Здравствуйте! Пишу с сайта HUB MASTER."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.6 20.4l1.3-3.7A7.5 7.5 0 1112 19.5a7.5 7.5 0 01-3.6-.9l-4.8 1.8z"/><path d="M9.1 8.9c-.2 0-.5.1-.7.4-.3.3-.9.8-.9 2s.9 2.4 1 2.5c.1.2 1.8 2.7 4.3 3.7 2 .8 2.5.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.1-.3-.2-.5-.3-.3-.2-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.7.9c-.1.1-.3.2-.5.1-.3-.1-1.1-.4-2-1.2-.7-.7-1.2-1.4-1.4-1.7-.1-.2 0-.4.1-.5l.4-.4c.1-.2.2-.3.2-.5.1-.2 0-.3 0-.4 0-.1-.6-1.4-.8-1.9-.2-.4-.4-.4-.5-.4h-.2z"/></svg>WhatsApp</a>
   <a href="tel:+77058462749"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3l1.5 4-2 1.5a11 11 0 005 5l1.5-2 4 1.5v3a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg>Звонок</a>
-  <a class="js-wa" href="https://wa.me/77058462749" data-msg="Здравствуйте! Пришлите, пожалуйста, КП по вашим услугам."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M9.5 12h5M9.5 15.5h5"/></svg>КП</a>
+  <a class="js-wa" href="https://wa.me/77058462749" data-msg="Здравствуйте! Пришлите, пожалуйста, КП по вашим услугам."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3h7l4 4v14h-11z"/><path d="M13.5 3v4h4M9.5 12h5M9.5 15.5h5"/></svg>КП</a>
 </nav>
 <button class="fab fab-up" id="upFab" aria-label="Наверх"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V6M6 11l6-6 6 6"/></svg></button>
 
