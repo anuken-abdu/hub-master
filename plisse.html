@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru" data-theme="night">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18248060318">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-18248060318');
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Москитные Сетки — Плиссе · Алматы и Астана</title>
@@ -200,6 +190,25 @@ html[data-theme="day"] .hero-night{display:none}
 
 @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18248060318"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18248060318');
+</script>
+<!-- Конверсия: клик по номеру телефона (звонок) -->
+<script>
+function gtag_report_conversion(url){
+  var callback=function(){ if(typeof(url)!=='undefined'){ window.location=url; } };
+  gtag('event','conversion',{
+    'send_to':'AW-18248060318/Hly2CLXX_8AcEJ6brf1D',
+    'value':1.0,'currency':'KZT','event_callback':callback
+  });
+  return false;
+}
+</script>
 </head><body>
 <header class="hdr">
   <div class="wrap hdr-in">
@@ -404,6 +413,18 @@ html[data-theme="day"] .hero-night{display:none}
   if(backFab)backFab.addEventListener('click',function(){history.back();});
   var backBtn=document.getElementById('backBtn');
   if(backBtn)backBtn.addEventListener('click',function(){history.back();});
+
+  // Конверсия Google Ads по клику на номер телефона (все кнопки «Звонок»)
+  document.querySelectorAll('a[href^="tel:"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var url=a.getAttribute('href');
+      if(typeof gtag_report_conversion==='function'){
+        e.preventDefault();
+        try{gtag_report_conversion(url);}catch(err){}
+        setTimeout(function(){window.location=url;},900);
+      }
+    });
+  });
 
   // AOS
   var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
